@@ -12,6 +12,10 @@ ul {
     padding: 0;
 }
 
+img {
+    display: block;
+}
+
 button {
     cursor: pointer;
 }
@@ -38,12 +42,49 @@ button {
     padding-left: 15;
     padding-right: 15;
     margin: 0 auto;
+    outline: 2px solid red;
 }
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+} 
 
 /* -----------------HEADER------------------ */
 
 .header {
     background-color: gray;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.header-logo {
+    margin-right: 70px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-list {
+    display: flex;
+}
+
+.header-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.header-connect {
+    margin-left: auto;
 }
 
 .header-link,
@@ -63,6 +104,13 @@ button {
 }
 
 .header-button {
+    margin-left: 40px;
+    border: 1px solid var(--accent-color);
+    border-radius: 25px;
+    min-width: 160px;
+    min-height: 40px;
+
+    background-color: transparent;
     font-family: inherit;
     font-weight: 600;
     font-size: 12px;
@@ -76,6 +124,21 @@ button {
 
 .hero {
     background-color: gray;
+}
+
+.hero-container {
+    display: flex;
+}
+
+.hero-right {
+    flex-grow: 1;
+    padding: 272px 0px 206px 96px;
+
+    background-color: rgb(14, 11, 11);
+}
+
+.hero-list {
+    width: 93px;
 }
 
 .hero-link {
@@ -109,6 +172,8 @@ button {
 }
 
 .hero-after-title {
+    max-width: 400px;
+
     font-size: 18px;
     line-height: calc(30 / 18);
     letter-spacing: 0.02em;
@@ -117,7 +182,14 @@ button {
 
 /* -----------ABOUT----------- */
 
+.about {
+    padding-top: 139px;
+    padding-bottom: 121px;
+}
+
 .about-pre-title {
+    margin-bottom: 20px;
+
     font-weight: 600;
     font-size: 11px;
     line-height: calc(15 / 11);
@@ -127,6 +199,8 @@ button {
 }
 
 .about-title {
+    margin-bottom: 20px;
+
     font-family: 'Raleway', sans-serif;
     font-size: 42px;
     line-height: calc(49 / 42);
@@ -135,6 +209,8 @@ button {
 }
 
 .about-after-title {
+    margin-bottom: 20px;
+
     font-size: 18px;
     line-height: calc(30 / 18);
     letter-spacing: 0.02em;
@@ -142,6 +218,8 @@ button {
 }
 
 .about-text {
+    margin-bottom: 40px;
+
     font-size: 14px;
     line-height: calc(26 / 14);
     letter-spacing: 0.02em;
@@ -160,10 +238,15 @@ button {
 /* -------------PRICES----------- */
 
 .prices {
+    padding-top: 130px;
+    padding-bottom: 130px;
+
     background-color: var(--second-title-color);
 }
 
 .prices-pre-title {
+    margin-bottom: 20px;
+
     font-weight: 600;
     font-size: 11px;
     line-height: calc(15 / 11);
@@ -173,6 +256,8 @@ button {
 }
 
 .prices-title {
+    margin-bottom: 44px;
+
     font-family: 'Raleway', sans-serif;
     font-size: 42px;    
     line-height: calc(49 / 42);
@@ -199,6 +284,11 @@ button {
 
 /* -----------------REASONS---------------- */
 
+.reasons {
+    padding-top: 121px;
+    padding-bottom: 130px;
+}
+
 .reasons-digit {
     font-weight: 700;
     font-size: 42px;
@@ -217,6 +307,8 @@ button {
 }
 
 .reasons-pre-title {
+    margin-bottom: 20px;
+
     font-weight: 600;
     font-size: 11px;
     line-height: calc(15 / 11);
@@ -226,6 +318,8 @@ button {
 }
 
 .reasons-title {
+    margin-bottom: 20px;
+
     font-family: 'Raleway', sans-serif;
     font-size: 42px;
     line-height: calc(49 / 42);
@@ -242,7 +336,14 @@ button {
 
 /* ---------------MASTERS----------------- */
 
+.masters {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
 .masters-pre-title {
+    margin-bottom: 20px;
+
     font-weight: 600;
     font-size: 11px;
     line-height: calc(15 / 11);
@@ -252,6 +353,8 @@ button {
 }
 
 .masters-title {
+    margin-bottom: 44px;
+
     font-family: 'Raleway', sans-serif;
     font-size: 42px;
     line-height: 1.17;
@@ -259,7 +362,19 @@ button {
     color: var(--second-title-color);
 }
 
+.masters-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px
+}
+
+.masters-item {
+    flex-basis: calc((100% - 90px) / 3);
+    margin: 15px;
+}
+
 .masters-item-title {
+    font-weight: 400;
     font-size: 18px;
     line-height: calc(25 / 18);
     text-align: center;
@@ -275,3 +390,23 @@ button {
     color: var(--accent-color);
 }
 
+
+/* --------------GALLERY-------------- */
+
+.gallery {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+.gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+}
+
+.gallery-item {
+    width: calc(100% / 4 - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
