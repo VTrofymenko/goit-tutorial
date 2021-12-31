@@ -58,6 +58,48 @@ button {
     margin: -1px;
 } 
 
+.pre-title {
+    display: flex;
+    align-items: center;
+
+    font-weight: 600;
+    font-size: 11px;
+    line-height: calc(15 / 11);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.pre-title::before {
+    content: '';
+    height: 1px;
+    width: 63px;
+    margin-right: 21px;
+
+    background-color: currentColor;
+}
+
+.button {
+    border: 1px solid var(--accent-color);
+    border-radius: 25px;
+    min-width: 160px;
+    min-height: 40px;
+
+    background-color: transparent;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(16 / 12);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 42px;    
+    line-height: calc(49 / 42);
+    letter-spacing: 0.05em;
+}
+
 /* -----------------HEADER------------------ */
 
 .header {
@@ -105,18 +147,6 @@ button {
 
 .header-button {
     margin-left: 40px;
-    border: 1px solid var(--accent-color);
-    border-radius: 25px;
-    min-width: 160px;
-    min-height: 40px;
-
-    background-color: transparent;
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: calc(16 / 12);
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
     color: var(--first-button-color);
 }
 
@@ -161,11 +191,7 @@ button {
 }
 
 .hero-pre-title {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: calc(15 / 11);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    margin-bottom: 20px;
     color: rgba(157, 164, 189, 0.6);
 }
 
@@ -195,22 +221,20 @@ button {
 
 .about-pre-title {
     margin-bottom: 20px;
-
-    font-weight: 600;
-    font-size: 11px;
-    line-height: calc(15 / 11);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     color: #303030;
+}
+
+.about-pre-title::before {
+    content: '';
+    height: 1px;
+    width: 63px;
+    margin-right: 40px;
+
+    background-color: #303030;
 }
 
 .about-title {
     margin-bottom: 20px;
-
-    font-family: 'Raleway', sans-serif;
-    font-size: 42px;
-    line-height: calc(49 / 42);
-    letter-spacing: 0.05em;
     color: var(--second-title-color);
 }
 
@@ -233,58 +257,88 @@ button {
 }
 
 .about-button {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: calc(16 / 12);
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
     color: var(--second-button-color);
 }
 
 /* -------------PRICES----------- */
 
 .prices {
+    background-color: #111319;
     padding-top: 130px;
     padding-bottom: 130px;
-
-    background-color: var(--second-title-color);
+    background-image: url(../images/bcg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .prices-pre-title {
-    margin-bottom: 20px;
-
-    font-weight: 600;
-    font-size: 11px;
-    line-height: calc(15 / 11);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     color: rgba(157, 164, 189, 0.6);
+    margin-bottom: 20px;
 }
 
 .prices-title {
-    margin-bottom: 44px;
-
-    font-family: 'Raleway', sans-serif;
-    font-size: 42px;    
-    line-height: calc(49 / 42);
-    letter-spacing: 0.05em;
     color: var(--first-title-color);
+    margin-bottom: 44px;
+}
+
+.prices-wrap {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.prices-list {
+    width: 50%;
+    padding: 30px 40px;
+}
+
+.prices-list-left {
+    background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.prices-list-right {
+    background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
+.prices-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: baseline;
+}
+
+.prices-item::before {
+    content: "";
+    height: 1px;
+    
+    flex-grow: 1;
+    background: rgba(157, 164, 189, 0.12);
+    border-bottom: 1px solid rgba(157, 164, 189, 0.12);
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.prices-item:last-child {
+    margin-bottom: 0;
 }
 
 .prices-item-text {
     font-size: 18px;
-    line-height: calc(30 / 18);
+    line-height: 1.67;
     letter-spacing: 0.02em;
     color: #9da4bd;
 }
 
+.prices-item-text:first-child {
+    order: -1;
+}
+
 .prices-button {
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: calc(16 / 12);
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
+    display: block;
+    margin: 0 auto;
+
     color: var(--first-button-color);
 }
 
@@ -314,22 +368,11 @@ button {
 
 .reasons-pre-title {
     margin-bottom: 20px;
-
-    font-weight: 600;
-    font-size: 11px;
-    line-height: calc(15 / 11);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     color: #303030;
 }
 
 .reasons-title {
     margin-bottom: 20px;
-
-    font-family: 'Raleway', sans-serif;
-    font-size: 42px;
-    line-height: calc(49 / 42);
-    letter-spacing: 0.05em;
     color: var(--second-title-color);
 }
 
@@ -351,22 +394,11 @@ button {
 
 .masters-pre-title {
     margin-bottom: 20px;
-
-    font-weight: 600;
-    font-size: 11px;
-    line-height: calc(15 / 11);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     color: #303030;
 }
 
 .masters-title {
     margin-bottom: 44px;
-
-    font-family: 'Raleway', sans-serif;
-    font-size: 42px;
-    line-height: 1.17;
-    letter-spacing: 0.05em;
     color: var(--second-title-color);
 }
 
@@ -464,4 +496,66 @@ button {
     width: calc(100% / 4 - 30px);
     margin-left: 30px;
     margin-bottom: 30px;
+}
+
+.connect-wrap {
+    background-color: #191C26;
+    background-image: url(../images/contacts-bcg.png);
+    background-repeat: no-repeat;
+    background-size: calc(50% - 15px);
+    background-position: right;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.connect-container {
+    display: flex;
+}
+
+.online {
+    flex-grow: 1;
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+.contacts {
+    width: calc(50% - 15px);
+    padding-left: 100px;
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+.contacts-title {
+    color: var(--first-title-color);
+    margin-bottom: 40px;
+}
+
+.contacts-list {
+    max-width: 270px;
+    margin-bottom: 70px;
+}
+
+.contacts-item + .contacts-item {
+    margin-top: 20px;
+}
+
+.contacts-link {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: #9da4bd;
+    font-style: normal;
+}
+
+.contacts-time-title {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.contacts-time-text {
+    font-size: 18px;
+    line-height: calc(30 / 18);
+    letter-spacing: 0.02em;
+    color: #9DA4BD;
+
 }
