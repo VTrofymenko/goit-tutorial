@@ -1,0 +1,45 @@
+.about {
+  padding-top: 139px;
+  padding-bottom: 121px;
+}
+
+.about-pre-title {
+  margin-bottom: 20px;
+  color: #303030;
+
+  &::before {
+    content: '';
+    height: 1px;
+    width: 63px;
+    margin-right: 40px;
+
+    background-color: #303030;
+  }
+}
+
+.about-title {
+  margin-bottom: 20px;
+  color: var(--second-title-color);
+}
+
+.about-after-title {
+  margin-bottom: 20px;
+
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: #555555;
+}
+
+.about-text {
+  margin-bottom: 40px;
+
+  font-size: 14px;
+  line-height: calc(26 / 14);
+  letter-spacing: 0.02em;
+  color: #555555;
+}
+
+.about-button {
+  color: var(--second-button-color);
+}

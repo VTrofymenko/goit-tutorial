@@ -1,0 +1,50 @@
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  &-logo {
+    margin-right: 70px;
+  }
+
+  &-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &-list {
+    display: flex;
+  }
+}
+
+.header-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.header-connect {
+  margin-left: auto;
+}
+
+.header-link,
+.header-tel {
+  transition: color 300ms linear;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.1em;
+  color: var(--header-color);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.header-button {
+  margin-left: 40px;
+  color: var(--first-button-color);
+}
